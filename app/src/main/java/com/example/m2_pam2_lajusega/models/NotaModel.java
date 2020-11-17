@@ -5,6 +5,9 @@ public class NotaModel {
     private String titulo;
     private String contenido;
 
+    public NotaModel() {
+    }
+
     public NotaModel(String titulo, String contenido) {
         this.titulo = titulo;
         this.contenido = contenido;

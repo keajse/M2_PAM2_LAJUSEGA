@@ -14,7 +14,7 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Ingrese título"
+        android:hint="Ingrese el nombre del Santo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_marginTop="44dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Contenido"
+        android:hint="Descripción"
         android:inputType="textMultiLine"
         android:lines="3"
         app:layout_constraintEnd_toEndOf="parent"

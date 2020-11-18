@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class RegistroActivity extends AppCompatActivity {
 
-    private EditText et_registro_titulo, et_registro_contenido;
+    private EditText et_registro_titulo, et_registro_contenido, et_frase;
     private Button btn_registro_guardar;
     private NotaModel model;
     private String TAG = "LFNOT";
@@ -38,17 +38,19 @@ public class RegistroActivity extends AppCompatActivity {
 
         et_registro_contenido = findViewById(R.id.et_registro_contenido);
         et_registro_titulo = findViewById(R.id.et_registro_titulo);
+        et_frase = findViewById(R.id.et_frase);
         btn_registro_guardar = findViewById(R.id.btn_registro_guardar);
 
 
         btn_registro_guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String contenido, titulo;
+                String contenido, titulo, frase;
                 titulo = et_registro_titulo.getText().toString();
                 contenido = et_registro_contenido.getText().toString();
+                frase = et_frase.getText().toString();
 
-                model = new NotaModel(titulo, contenido);
+                model = new NotaModel(titulo, contenido, frase);
 
 // Add a new document with a generated ID
                 db.collection(collection)

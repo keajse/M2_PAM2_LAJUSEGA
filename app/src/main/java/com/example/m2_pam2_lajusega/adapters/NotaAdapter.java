@@ -51,14 +51,16 @@ public class NotaAdapter extends BaseAdapter {
             view = layoutInflater.inflate(R.layout.nota_item, viewGroup, false);
         }
 
-        TextView item_titulo, item_contenido, item_fecha;
+        TextView item_titulo, item_contenido, item_fecha, item_frase;
         ImageView item_imagen;
-        String titulo, contenido;
+        String titulo, contenido, frase;
 
         item_imagen = view.findViewById(R.id.item_imagen);
         item_titulo = view.findViewById(R.id.item_titulo);
         item_contenido = view.findViewById(R.id.item_contenido);
         item_fecha = view.findViewById(R.id.item_fecha);
+        item_frase = view.findViewById(R.id.item_frase);
+
 
         //Forma 1
         titulo = list.get(i).getTitulo().trim();
@@ -69,6 +71,9 @@ public class NotaAdapter extends BaseAdapter {
         item_titulo.setText(titulo);
 
         //Forma 2
+
+        item_frase.setText(list.get(i).getFrase());
+
         item_titulo.setText(list.get(i).getTitulo());
 
         item_contenido.setText(list.get(i).getContenido());
@@ -79,7 +84,7 @@ public class NotaAdapter extends BaseAdapter {
 
         //Forma dinámica
         // Iconos
-        String[] iconos = { "ic_accessibility_new_white_18dp", "ic_account_circle_white_18dp", "ic_android_white_18dp", "ic_pregnant_woman_white_18dp"};
+        String[] iconos = { "ic_account_circle_white_18dp"};
         Random r =new Random();
         int randomNumber = r.nextInt(iconos.length);
 
